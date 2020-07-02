@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'ubuntu:18.04'
+      image 'node:7-alpine'
     }
 
   }
@@ -9,7 +9,7 @@ pipeline {
     stage('build') {
       steps {
         echo 'Startting build stage'
-        sh 'make'
+        sh 'node --version'
       }
     }
 
