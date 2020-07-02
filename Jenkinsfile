@@ -9,7 +9,13 @@ pipeline {
     stage('build') {
       steps {
         echo 'Startting build stage'
-        sh 'go version'
+        sh 'go build hello-world.go'
+      }
+    }
+
+    stage('run') {
+      steps {
+        sh './hello-world'
       }
     }
 
