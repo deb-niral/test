@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        echo 'Startting build stage'
+        echo 'Startting build stage now'
         sh 'go build hello.go'
       }
     }
